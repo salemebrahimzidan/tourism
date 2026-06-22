@@ -19,7 +19,6 @@ export default function ServiceCard({ service }: ServiceCardProps) {
           alt={image.alt}
           aspectRatio="wide"
           hoverZoom
-          overlay
         />
         <div className="absolute bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/95 text-primary shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
           <Icon className="h-6 w-6" />

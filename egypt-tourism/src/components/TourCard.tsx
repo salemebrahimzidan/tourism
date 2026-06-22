@@ -19,7 +19,6 @@ export default function TourCard({ tour }: TourCardProps) {
           alt={image.alt}
           aspectRatio="wide"
           hoverZoom
-          overlay
         />
         <span className="absolute bottom-4 right-4 rounded-full bg-white/95 px-4 py-1.5 text-xs font-bold text-primary shadow-md backdrop-blur-sm">
           {tour.price}

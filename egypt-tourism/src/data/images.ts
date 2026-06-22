@@ -77,7 +77,37 @@ export const tourImages: Record<string, SiteImage> = {
     src: local('tour-nile.jpg'),
     alt: 'تجربة فاخرة على نهر النيل',
   },
+  // Additional curated images for gallery and specialty sections
+  'tourists-pyramids': {
+    id: 'tourists-pyramids',
+    src: local('tour-pyramids.jpg'),
+    alt: 'سياح يزورون أهرامات الجiza',
+  },
+  'khan-el-khalili': {
+    id: 'khan-el-khalili',
+    src: local('tour-cairo.jpg'),
+    alt: 'سوق خان الخليلي التاريخي في القاهرة',
+  },
+  'egypt-landmarks': {
+    id: 'egypt-landmarks',
+    src: local('tour-pyramids.jpg'),
+    alt: 'معالم سياحية مصرية متنوعة',
+  },
+  'luxury-experience': {
+    id: 'luxury-experience',
+    src: local('service-hotels.jpg'),
+    alt: 'تجربة سفر فاخرة في مصر',
+  },
 }
+
+export const galleryImages: SiteImage[] = [
+  { id: 'g-pyramids', src: local('hero-pyramids.jpg'), alt: 'الأهرامات - منظر بانورامي' },
+  { id: 'g-museum', src: local('tour-museum.jpg'), alt: 'المتحف المصري الكبير' },
+  { id: 'g-nile', src: local('tour-nile.jpg'), alt: 'نهر النيل عند الغروب' },
+  { id: 'g-cairo', src: local('tour-cairo.jpg'), alt: 'شوارع وأسواق القاهرة' },
+  { id: 'g-luxury', src: local('service-hotels.jpg'), alt: 'سفر فاخر وإقامة فندقية' },
+  { id: 'g-khan', src: local('tour-cairo.jpg'), alt: 'خان الخليلي - أجواء السوق' },
+]
 
 export function isLocalImage(src: string): boolean {
   return src.startsWith('/')
