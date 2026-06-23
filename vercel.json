@@ -1,0 +1,6 @@
+{
+  "installCommand": "cd egypt-tourism && npm install",
+  "buildCommand": "cd egypt-tourism && npm run build",
+  "outputDirectory": "egypt-tourism/dist",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
