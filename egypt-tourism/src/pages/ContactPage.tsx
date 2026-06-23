@@ -75,7 +75,14 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-text">الموقع</h3>
-                    <p className="mt-1 text-sm text-gray-600">{contactInfo.address}</p>
+                    <p className="mt-1 text-sm text-gray-600">
+                      {contactInfo.address.map((line, i) => (
+                        <span key={line}>
+                          {i > 0 && <br />}
+                          {line}
+                        </span>
+                      ))}
+                    </p>
                   </div>
                 </div>
               </div>

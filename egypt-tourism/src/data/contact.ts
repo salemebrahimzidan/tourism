@@ -2,7 +2,7 @@ export const contactInfo = {
   whatsapp: '000000000000',
   phone: '000000000000',
   email: '0000000@khalidtraval.com',
-  address: 'القاهرة، مصر — المعادي',
+  address: ['القاهرة، التجمع الخامس', 'الشيخ زايد'],
   defaultMessage:
     'السلام عليكم، أود الاستفسار عن خدماتكم السياحية في مصر. هل يمكنكم مساعدتي؟',
   social: {
