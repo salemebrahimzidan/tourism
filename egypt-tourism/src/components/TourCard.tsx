@@ -17,6 +17,7 @@ export default function TourCard({ tour }: TourCardProps) {
         <OptimizedImage
           src={image.src}
           alt={image.alt}
+          objectPosition={image.objectPosition}
           aspectRatio="wide"
           hoverZoom
           overlay

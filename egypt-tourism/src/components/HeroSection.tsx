@@ -9,13 +9,15 @@ export default function HeroSection() {
       <OptimizedImage
         src={heroImage.src}
         alt={heroImage.alt}
+        objectPosition={heroImage.objectPosition}
         fill
         priority
+        quality={90}
         sizes="100vw"
         widths={[640, 960, 1280, 1920]}
       />
 
-      <div className="absolute inset-0 bg-gradient-to-l from-black/85 via-black/60 to-black/30" />
+      <div className="absolute inset-0 bg-gradient-to-l from-black/80 via-black/45 to-black/20" />
 
       <div className="relative z-10 mx-auto flex min-h-[560px] max-w-7xl items-center px-4 py-20 md:min-h-[680px] md:px-6 md:py-32">
         <div className="max-w-2xl">
@@ -28,7 +30,7 @@ export default function HeroSection() {
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-white/90 drop-shadow md:text-lg">
             استقبال من المطار، خصومات على الفنادق والسيارات والوحدات السكنية،
-            برامج سياحية للأهرامات والمتحف المصري الكبير، ومرشدين محترفين —
+            برامج سياحية للأهرامات ونهر النيل، ومرشدين محترفين —
             كل ذلك بخدمة عربية موثوقة.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
