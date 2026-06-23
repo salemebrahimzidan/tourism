@@ -20,18 +20,23 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-l from-black/80 via-black/45 to-black/20" />
 
       <div className="relative z-10 mx-auto flex min-h-[560px] max-w-7xl items-center px-4 py-20 md:min-h-[680px] md:px-6 md:py-32">
-        <div className="max-w-2xl">
+        <div className="max-w-3xl">
           <span className="mb-4 inline-block rounded-full border border-secondary/50 bg-secondary/15 px-4 py-1.5 text-sm font-semibold text-secondary backdrop-blur-sm">
             ✦ رفيقك الموثوق في مصر
           </span>
-          <h1 className="text-3xl font-extrabold leading-tight drop-shadow-lg md:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
-            تجربة سياحية فاخرة
-            <span className="mt-1 block text-secondary">للسعوديين وطلاب المملكة</span>
+          <h1 className="text-3xl font-extrabold leading-tight drop-shadow-lg md:text-4xl lg:text-5xl lg:leading-[1.2]">
+            بوابتك إلى تجربة استثنائية في مصر
           </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-white/90 drop-shadow md:text-lg">
-            استقبال من المطار، خصومات على الفنادق والسيارات والوحدات السكنية،
-            برامج سياحية للأهرامات ونهر النيل، ومرشدين محترفين —
-            كل ذلك بخدمة عربية موثوقة.
+          <p className="mt-6 text-base leading-relaxed text-white/90 drop-shadow md:text-lg">
+            نقدّم خدمات مميزة للسياح والزوار والطلاب الخليجيين والعرب، تشمل
+            الاستقبال من المطار، وحجوزات الفنادق والوحدات السكنية بأسعار خاصة،
+            وتأجير السيارات، وتنظيم البرامج السياحية والترفيهية، مع مرشدين
+            محترفين وخدمة عربية موثوقة تضمن لكم الراحة والأمان طوال فترة
+            إقامتكم.
+          </p>
+          <p className="mt-4 text-base leading-relaxed text-white/90 drop-shadow md:text-lg">
+            سواء كنت سائحًا، طالبًا، أو زائرًا بغرض العمل، نحن نوفر لك كل ما
+            تحتاجه لتجربة مريحة وممتعة من لحظة وصولك حتى مغادرتك.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button href={getWhatsAppUrl()} variant="whatsapp">
