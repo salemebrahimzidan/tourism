@@ -23,7 +23,7 @@ export default function Navbar() {
             <MapPin className="h-5 w-5" />
           </div>
           <div>
-            <span className="block text-lg font-extrabold text-primary">مصر الذهبية</span>
+            <span className="block text-lg font-extrabold text-primary">KhalidTraval</span>
             <span className="block text-xs text-gray-500">للسياحة والسفر</span>
           </div>
         </Link>

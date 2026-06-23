@@ -16,14 +16,6 @@ export const tours: Tour[] = [
     price: 'من 1,500 جنيه',
   },
   {
-    id: 'grand-museum',
-    title: 'زيارة المتحف المصري الكبير',
-    duration: '4 ساعات',
-    description:
-      'استكشف أكبر متحف أثري في العالم وشاهد كنوز توت عنخ آمون.',
-    price: 'من 1,200 جنيه',
-  },
-  {
     id: 'cairo-tour',
     title: 'جولة القاهرة',
     duration: '8 ساعات',

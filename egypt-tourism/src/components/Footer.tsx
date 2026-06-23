@@ -3,7 +3,7 @@ import { MapPin, Phone } from 'lucide-react'
 import { FacebookIcon, InstagramIcon, TwitterIcon } from './SocialIcons'
 import WhatsAppButton from './WhatsAppButton'
 import { contactInfo } from '../data/contact'
-import { getWhatsAppUrl } from '@/lib/whatsapp'
+import { getWhatsAppUrl } from '../lib/whatsapp'
 
 export default function Footer() {
   return (
@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 md:px-6">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div>
-            <h3 className="mb-4 text-lg font-bold text-secondary">مصر الذهبية للسياحة</h3>
+            <h3 className="mb-4 text-lg font-bold text-secondary">KhalidTraval</h3>
             <p className="text-sm leading-relaxed text-gray-300">
               شريكك الموثوق في مصر للزوار السعوديين وطلاب المملكة ودول الخليج.
               من الاستقبال في المطار إلى البرامج السياحية — بخدمة عربية احترافية.
@@ -100,7 +100,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 border-t border-white/10 pt-6 text-center text-sm text-gray-400">
-          © {new Date().getFullYear()} مصر الذهبية للسياحة. جميع الحقوق محفوظة.
+          © {new Date().getFullYear()} KhalidTraval. جميع الحقوق محفوظة.
         </div>
       </div>
     </footer>

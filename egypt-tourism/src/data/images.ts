@@ -1,81 +1,88 @@
 /**
- * Central image registry — replace paths here or from an admin dashboard later.
- * Images are stored in /public/images/ (sourced from Unsplash & Pexels, royalty-free).
+ * Central image registry — local tourism photos in /public/images/.
+ * Add or replace JPG files there; update paths below if filenames change.
  */
 
 export interface SiteImage {
   id: string
-  /** Local path under /public or external URL */
+  /** Path under /public, e.g. /images/hero-pyramids.jpg */
   src: string
   alt: string
+  objectPosition?: string
 }
 
-const local = (filename: string) => `/images/${filename}`
+const asset = (filename: string) => `/images/${filename}`
 
 export const heroImage: SiteImage = {
   id: 'hero-pyramids',
-  src: local('hero-pyramids.jpg'),
-  alt: 'منظر بانورامي لأهرامات الجiza عند الغروب',
+  src: asset('hero-pyramids.jpg'),
+  alt: 'منظر بانورامي لأهرامات الجيزة عند الغروب',
+  objectPosition: 'center 35%',
 }
 
 export const serviceImages: Record<string, SiteImage> = {
   'airport-pickup': {
     id: 'service-airport',
-    src: local('service-airport.jpg'),
+    src: asset('service-airport.jpg'),
     alt: 'سيارة فاخرة لاستقبال من المطار',
+    objectPosition: 'center 60%',
   },
   'hotel-discounts': {
     id: 'service-hotels',
-    src: local('service-hotels.jpg'),
+    src: asset('service-hotels.jpg'),
     alt: 'فندق فاخر بإطلالة استثنائية',
+    objectPosition: 'center center',
   },
   'car-rental': {
     id: 'service-cars',
-    src: local('service-cars.jpg'),
+    src: asset('service-cars.jpg'),
     alt: 'سيارة فاخرة للإيجار',
+    objectPosition: 'center 55%',
   },
   apartments: {
     id: 'service-apartments',
-    src: local('service-apartments.jpg'),
+    src: asset('service-apartments.jpg'),
     alt: 'وحدة سكنية فاخرة ومجهزة',
+    objectPosition: 'center center',
   },
   'saudi-students': {
     id: 'service-students',
-    src: local('service-students.jpg'),
+    src: asset('service-students.jpg'),
     alt: 'طلاب في رحلة تعليمية وسياحية',
+    objectPosition: 'center 30%',
   },
   'tour-programs': {
     id: 'service-tours',
-    src: local('service-tours.jpg'),
+    src: asset('service-tours.jpg'),
     alt: 'معالم سياحية في مصر — صحراء وآثار',
+    objectPosition: 'center 40%',
   },
   'tour-guides': {
     id: 'service-guides',
-    src: local('service-guides.jpg'),
+    src: asset('service-guides.jpg'),
     alt: 'مرشد سياحي محترف في رحلة استكشاف',
+    objectPosition: 'center center',
   },
 }
 
 export const tourImages: Record<string, SiteImage> = {
   pyramids: {
     id: 'tour-pyramids',
-    src: local('tour-pyramids.jpg'),
-    alt: 'أهرامات الجiza وتمثال أبو الهول',
-  },
-  'grand-museum': {
-    id: 'tour-museum',
-    src: local('tour-museum.jpg'),
-    alt: 'آثار فرعونية في المتحف المصري الكبير',
+    src: asset('tour-pyramids.jpg'),
+    alt: 'أهرامات الجيزة وتمثال أبو الهول',
+    objectPosition: 'center 45%',
   },
   'cairo-tour': {
     id: 'tour-cairo',
-    src: local('tour-cairo.jpg'),
+    src: asset('tour-cairo.jpg'),
     alt: 'جولة في قلب القاهرة والمعالم التاريخية',
+    objectPosition: 'center 35%',
   },
   'full-day-guide': {
     id: 'tour-nile-luxury',
-    src: local('tour-nile.jpg'),
+    src: asset('tour-nile.jpg'),
     alt: 'تجربة فاخرة على نهر النيل',
+    objectPosition: 'center 50%',
   },
 }
 
@@ -83,16 +90,21 @@ export function isLocalImage(src: string): boolean {
   return src.startsWith('/')
 }
 
-/** Build optimized URL — local images are served as-is */
-export function buildImageUrl(src: string, width: number, quality = 80): string {
+/** Build optimized URL — local files are served as-is */
+export function buildImageUrl(src: string, width: number, quality = 85): string {
   if (isLocalImage(src)) return src
 
   const separator = src.includes('?') ? '&' : '?'
   return `${src}${separator}auto=format&fit=crop&w=${width}&q=${quality}`
 }
 
-export function buildSrcSet(src: string, widths: number[], quality = 80): string | undefined {
+export function buildSrcSet(
+  src: string,
+  widths: number[],
+  quality = 85,
+): string | undefined {
   if (isLocalImage(src)) return undefined
+
   return widths.map((w) => `${buildImageUrl(src, w, quality)} ${w}w`).join(', ')
 }
 
@@ -100,8 +112,9 @@ export function getServiceImage(serviceId: string): SiteImage {
   return (
     serviceImages[serviceId] ?? {
       id: `service-${serviceId}`,
-      src: local('service-tours.jpg'),
+      src: asset('service-tours.jpg'),
       alt: 'خدمة سياحية في مصر',
+      objectPosition: 'center center',
     }
   )
 }
@@ -110,8 +123,9 @@ export function getTourImage(tourId: string): SiteImage {
   return (
     tourImages[tourId] ?? {
       id: `tour-${tourId}`,
-      src: local('tour-pyramids.jpg'),
+      src: asset('tour-pyramids.jpg'),
       alt: 'برنامج سياحي في مصر',
+      objectPosition: 'center center',
     }
   )
 }

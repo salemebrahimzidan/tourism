@@ -42,7 +42,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
             title="البرامج السياحية"
-            subtitle="اكتشف عجائب مصر — من الأهرامات إلى المتحف المصري الكبير"
+            subtitle="اكتشف عجائب مصر — من الأهرامات إلى نهر النيل"
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
             {tours.slice(0, 2).map((tour) => (

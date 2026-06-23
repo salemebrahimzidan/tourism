@@ -10,7 +10,14 @@ export default function StudentsDiscountSection() {
   return (
     <section className="relative overflow-hidden bg-primary py-16 text-white md:py-24">
       <div className="absolute inset-0 opacity-20">
-        <OptimizedImage src={image.src} alt="" fill sizes="100vw" widths={[640, 1280, 1920]} />
+        <OptimizedImage
+          src={image.src}
+          alt=""
+          objectPosition={image.objectPosition}
+          fill
+          sizes="100vw"
+          widths={[640, 1280, 1920]}
+        />
       </div>
       <div className="absolute inset-0 bg-gradient-to-l from-primary via-primary/95 to-primary/85" />
 
@@ -54,6 +61,7 @@ export default function StudentsDiscountSection() {
             <OptimizedImage
               src={image.src}
               alt={image.alt}
+              objectPosition={image.objectPosition}
               aspectRatio="card"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
